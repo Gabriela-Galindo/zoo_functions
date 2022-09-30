@@ -22,4 +22,10 @@ describe('Testes da função HandlerElephants', () => {
   it('deve retornar undefined quando não recebe parâmetros', () => {
     expect(handlerElephants()).toBeUndefined();
   });
+  it('deve retornar "parâmetro inválido" se não receber uma string como parâmetro', () => {
+    expect(handlerElephants({})).toBe('Parâmetro inválido, é necessário uma string');
+  });
+  it('deve retornar "nul" se receber como parâmetro uma string que não contempla uma funcionalidade', () => {
+    expect(handlerElephants('peso')).toBeNull();
+  });
 });
