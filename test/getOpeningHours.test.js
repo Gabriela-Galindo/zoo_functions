@@ -19,16 +19,22 @@ describe('Testes da função getOpeningHours', () => {
   it('deve retornar que o zoo está aberto quando receber dia e hora válidos', () => {
     expect(getOpeningHours('Tuesday', '09:00-AM')).toBe('The zoo is open');
   });
-  it('deve retornar mensagem de erro quando receber dia incorreto', () => {
+  it('deve retornar mensagem de erro quando receber dia escrito de forma incorreta', () => {
     expect(() => getOpeningHours('Thu', '09:00-AM')).toThrowError('The day must be valid. Example: Monday');
   });
   it('deve retornar mensagem de erro quando receber abreviação incorreta', () => {
     expect(() => getOpeningHours('Friday', '09:00-ZM')).toThrowError('The abbreviation must be \'AM\' or \'PM\'');
   });
-  it('deve retornar mensagem de erro quando receber número de horas incorreto', () => {
+  it('deve retornar mensagem de erro quando receber um formato de número de horas incorreto', () => {
     expect(() => getOpeningHours('Saturday', 'C9:00-AM')).toThrowError('The hour should represent a number');
   });
-  it('deve retornar mensagem de erro quando receber número de minutos incorreto', () => {
+  it('deve retornar mensagem de erro quando receber um formato de número de minutos incorreto', () => {
     expect(() => getOpeningHours('Sunday', '09:c0-AM')).toThrowError('The minutes should represent a number');
+  });
+  it('deve retornar mensagem de erro quando receber um número de horas fora dos limites', () => {
+    expect(() => getOpeningHours('Monday', '13:00-AM')).toThrowError('The hour must be between 0 and 12');
+  });
+  it('deve retornar mensagem de erro quando receber um número de minutos fora dos limites', () => {
+    expect(() => getOpeningHours('Tuesday', '09:60-AM')).toThrowError('The minutes must be between 0 and 59');
   });
 });
