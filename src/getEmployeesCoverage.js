@@ -12,15 +12,7 @@ function getSpecies(parametro) {
 function getEmployeesCoverage(param) {
   const resultPerson = { id: '', fullname: '' };
   // eslint-disable-next-line array-callback-return
-  const personInfo = data.employees.find((person) => {
-    if (person.firstName === param.name
-      || person.lastName === param.name
-      || person.id === param.id) {
-      resultPerson.id = person.id;
-      resultPerson.fullname = `${person.firstName} ${person.lastName}`;
-      return resultPerson;
-    }
-  });
+  const personInfo = data.employees.find((person) => resultPerson);
   const animalsManaged = personInfo.responsibleFor.forEach(getSpecies());
   return animalsManaged;
 }
