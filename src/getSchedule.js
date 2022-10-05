@@ -22,6 +22,8 @@ function getDay(day) {
   }
 }
 
+const objectResult = getDay(daysOfTheWeek[0]);
+
 function getSchedule(scheduleTarget) {
   if (data.species.map((element) => element.name).includes(scheduleTarget)) {
     return data.species.find((animal) => animal.name === scheduleTarget).availability;
@@ -35,5 +37,5 @@ function getSchedule(scheduleTarget) {
   return getDay(daysOfTheWeek[0]);
 }
 
-console.log(getSchedule());
+console.log(objectResult);
 module.exports = getSchedule;
