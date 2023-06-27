@@ -1,13 +1,5 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Zoo Functions - Aplicação de organização de zoológico
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+### O seguinte projeto foi realizado durante o curso da Trybe, módulo de Fundamentos do Desenvolvimento Web, seção sobre Higher Order Functions no ES6.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+### O projeto consiste em  simular um sistema de relatório de um zoológico, através de funções que buscam informações sobre os animais do zoológico, bem como dados sobre as pessoas que colaboram com a manutenção e cuidado do zoológico. Também foram desenvolvidos testes sobre a aplicação, para garantir o funcionamento do código. 
